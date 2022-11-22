@@ -1,19 +1,29 @@
-module.exports = function() {
-    return "Hello"
+module.exports = {
+    getScore,
+    wonPoint
 }
+
 const score = ['love','15','30','40']
-const player1 = 0
-const player2 = 0
+let scorePlayerOne = 0
+let scorePlayerTwo = 1
 
+const playerOne = "player1"
+const playerTwo = "player2"
 
-function getScore() => {
-if(player1==player2 && player1===3){
+function getScore () {
+if(scorePlayerOne==scorePlayerTwo && scorePlayerOne===3){
     return 'Deuce';
-} else if(player1==player2){
-    return `${score[player1]}-all`
+} else if(scorePlayerOne==scorePlayerTwo){
+    return `${score[scorePlayerOne]}-all`
+}else{
+    return `${score[scorePlayerOne]}-${score[scorePlayerTwo]}`
 }
 };
 
-function wonPoint (player) => {
-    if ()
-};
+function wonPoint (player) {
+    if(player == "player1"){
+        scorePlayerOne++
+    } else {
+        scorePlayerTwo++
+    }
+}
