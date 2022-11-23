@@ -4,8 +4,8 @@ module.exports = {
 };
 
 const score = ["love", "15", "30", "40"];
-let advOne = true;
-let advTwo = false;
+let advOne = false;
+let advTwo = true;
 let winner 
 let scorePlayerOne = 3;
 let scorePlayerTwo = 3;

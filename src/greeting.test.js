@@ -1,14 +1,11 @@
 const greeting = require('./greeting')
 
 
-test('0 a 1 expect love-15', () => {
-    expect(greeting.getScore()).toBe("love-15");
+test('player 2 winner', () => {
+    expect(greeting.getScore()).toBe("Game player 2");
 });
 
-test('player win',() =>{
-    greeting.wonPoint("playerOne")
-    expect(greeting.getScore()).toBe('Game player 1');
-})
+
 
 
 
