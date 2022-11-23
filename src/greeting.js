@@ -4,27 +4,28 @@ module.exports = {
 };
 
 const score = ["love", "15", "30", "40"];
-let advOne = false;
+let advOne = true;
 let advTwo = false;
 let winner 
 let scorePlayerOne = 3;
 let scorePlayerTwo = 3;
 
-const playerOne = "PlayerOne";
-const playerTwo = "PlayerTwo";
-
 function getScore() {
-  if (advOne == true) {
-    return "Adv-1";
-  } else if (advTwo == true) {
-    return "Adv-2";
-  } else if (scorePlayerOne == scorePlayerTwo && scorePlayerOne === 3) {
-    return "Deuce";
-  } else if (scorePlayerOne == scorePlayerTwo) {
-    return `${score[scorePlayerOne]}-all`;
-  } else {
-    return `${score[scorePlayerOne]}-${score[scorePlayerTwo]}`;
-  }
+    if(winner == "playerOne"){
+        return "Game player 1"
+    } else if (winner == "playerTwo"){
+        return "Game player 2"
+    } else if (advOne == true) {
+        return "Adv-1";
+    } else if (advTwo == true) {
+        return "Adv-2";
+    } else if (scorePlayerOne == scorePlayerTwo && scorePlayerOne === 3) {
+        return "Deuce";
+    } else if (scorePlayerOne == scorePlayerTwo) {
+        return `${score[scorePlayerOne]}-all`;
+    } else {
+        return `${score[scorePlayerOne]}-${score[scorePlayerTwo]}`;
+    }
 }
 
 function wonPoint(player) {
@@ -34,12 +35,19 @@ function wonPoint(player) {
     } else {
       advTwo = true;
     }
-  }
-  if (getScore() == "Adv-1"){
-    playerOne
-  }
-
-  if (player == "playerOne") {
+  }else if (getScore() == "Adv-1"){
+    if (player == "playerOne"){
+        winner = "playerOne"
+    } else {
+        advOne = false
+    }
+  } else if(getScore() == "Adv-2"){
+    if (player == "playerTwo"){
+        winner = "playerTwo"
+    } else {
+        advTwo = false
+    }
+  } else if (player == "playerOne") {
     scorePlayerOne++;
   } else {
     scorePlayerTwo++;
