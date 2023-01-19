@@ -1,8 +1,8 @@
 const greeting = require('./greeting')
 
 
-test('player 2 winner', () => {
-    expect(greeting.getScore()).toBe("Game player 2");
+test('deuce 30-30', () => {
+    expect(greeting.getScore()).toBe("30-all");
 });
 
 

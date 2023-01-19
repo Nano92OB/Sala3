@@ -5,10 +5,10 @@ module.exports = {
 
 const score = ["love", "15", "30", "40"];
 let advOne = false;
-let advTwo = true;
+let advTwo = false;
 let winner 
-let scorePlayerOne = 3;
-let scorePlayerTwo = 3;
+let scorePlayerOne = 2;
+let scorePlayerTwo = 2;
 
 function getScore() {
     if(winner == "playerOne"){
